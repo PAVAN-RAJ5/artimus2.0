@@ -411,6 +411,68 @@ video {
   }
 }
 /* =========== Service ============ */
+.cards {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px; /* Adjust gap as needed */
+  width: 80%;
+  
+}
+
+.card {
+  display: flex;
+  width: 300px; /* Reduced size */
+  box-shadow: 0 4px 20px rgba(138, 43, 226, 0.6), 0 0 25px rgba(128, 0, 128, 0.6); /* Violet and purple shadows */
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100px; /* Fixed width for image */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Crop if needed */
+}
+
+.card-content {
+  padding: 10px; /* Add some padding */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center text vertically */
+}
+
+.card h2 {
+  font-size: 20px; /* Smaller font size */
+  margin: 5px 0;
+}
+
+.card p {
+  font-size: 14px; /* Smaller font size */
+  color: #666; /* Adjust color if needed */
+  margin: 5px 0;
+}
+
+.card button {
+  background: #6200ea; /* Change to desired color */
+  color: white;
+  border: none;
+  padding: 5px 10px; /* Reduced padding */
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.card button:hover {
+  background: #3700b3; /* Darker shade on hover */
+}
+
 .service .row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -428,6 +490,14 @@ video {
 
 .section .col .rating span {
   color: var(--primary);
+}
+
+.r{
+  display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #f4f4f4; /* Light background color */
+    padding: 20px; 
 }
 
 @media (max-width: 768px) {
@@ -644,31 +714,18 @@ video {
   margin-top: 2rem;
 }
 
-.more .row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5rem;
+.box{
+  width: 500px;
+  height: 500px;
+  padding-bottom: 25px;
 }
 
-.more .row .tours {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  margin-bottom: 9rem;
-}
 
-.more .col .btn {
-  display: block;
-  text-align: center;
-}
 
-.more .tours h3 {
-  margin: 1rem 0;
-}
 
-.more img {
-  object-fit: cover;
-}
+
+
+
 
 @media (max-width: 768px) {
   .more .row {
